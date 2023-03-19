@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100vh;
+}
+
+#root {
+  @apply flex bg-gray-200;
+}
+
+
+.messages-container {
+  @apply flex flex-1 flex-col p-2 overflow-auto;
+  max-height: calc(100vh - 80px);
+  .message-item {
+    @apply w-2/3 my-1.5 rounded-xl px-2 py-3 bg-indigo-50;
+    &.message-me {
+      @apply bg-indigo-600 self-end text-white;
+    }
+  }
+  .message-sender {
+
+  }
+  .message-body {
+
+  }
+
+}
+.message-input-container {
+  @apply flex-row flex gap-x-4;
+  height: 80px;
+  textarea {
+    @apply flex flex-1;
+  }
+  .button {
+    @apply bg-blue-700 text-white rounded px-2 py-3 items-center justify-center self-center;
+  }
+}
